@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Franchise</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg "> <!-- fixed-top -->
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="imgs/Logo.png" alt="Franchise Logo" /></a>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="overlayCanvas">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <!-- repalced offCanvas with logo div -->
+                            <div class="logo">
+                                <a href="index.html"><img src="imgs/Logo.png" alt="Franchise Logo" /></a>
+                            </div>
+                        </h5>
+                        <!-- added bgColor: white to X icon in button"btn-close" -->
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style="background-color: #ebebeb">
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="links navbar-nav justify-content-center flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">Hotels</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right-icons">
+                <a href="#">
+                    <i class="search fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="registration.html">
+                    <i class="user fa-regular fa-user"></i>
+                </a>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="overlay">
+            <div class="container">
+                <div class="hero-wrapper text-white">
+                    <h3 class="hotel-name">Hotel Franchise</h3>
+                    <h2 class="hero-title">
+                        Your Gateway <br />
+                        to Infinite <br />
+                        Comfort!
+                    </h2>
+
+                    <button class="hero-btn btn text-white">
+                        choose now <i class="fa-solid fa-arrow-right"></i>
+                        <!-- <i class="fa-solid fa-angle-right"></i> -->
+                    </button>
+
+                    <div class="bullets">
+                        <a href="#"><span class="active"></span></a>
+                        <a href="#"><span></span></a>
+                        <a href="#"><span></span></a>
+                        <a href="#"><span></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section About -->
+    <section class="about">
+        <div class="container">
+
+            <div class="about-header">
+                <!-- <div class="about-logo logo">
+                    <a href="index.html"><img src="imgs/Logo.png" alt="Franchise Logo" /></a>
+                </div> -->
+                <h2 class="about-title">about us</h2>
+            </div>
+
+            <div class="about-body">
+                <div class="row align-items-center justify-content-between gap-5">
+
+                    <div class="about-left col-lg-6 col-11 mx-auto">
+                        <h2 class="about-left-title">What is Hotel Franchise</h2>
+                        <p class="about-left-desc my-5 lead">
+                            We are a website that brings together more than 20 hotels around the world to make it easy
+                            for you to book and see more than one hotel at more than one price for more than one room at
+                            any time and any place so that you get complete comfort.
+                        </p>
+                        <button class="about-btn hero-btn btn text-white">
+                            discover more <i class="fa-solid fa-arrow-right"></i>
+                            <!-- <i class="fa-solid fa-angle-right"></i> -->
+                        </button>
+                    </div>
+                    <div class="about-right col-lg-5 col-9 p-3 mx-auto"> <!-- mx-auto && rounded-2 ofr resp -->
+                        <img class="about-img rounded-2" src="imgs/about-img.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+            <div class="about-bubble"></div>
+
+        </div>
+    </section>
+
+    <!-- Section Our Hotels -->
+    <section class="our-hotels">
+        <div class="container">
+
+            <div class="hotels-bubble1"></div>
+            <div class="hotels-bubble2"></div>
+
+            <div class="our-hotels-header">
+                <h2 class="hotels-main-title">our hotels</h2>
+                <h2 class="hotels-sec-title">the prefect places</h2>
+            </div>
+
+            <div class="our-hotels-body text-center">
+                <div class="row justify-content-evenly align-items-center text-center">
+
+                    <div class="icon-left col-1">
+                        <i class="fa-solid fa-left-long"></i>
+                    </div>
+
+                    <!-- content -->
+                    <div class="divs col-lg-3 col-md-5 col-11 mb-4">
+                        <img src="imgs/our-hotels-img1.jpg" alt="">
+                        <p>The JW Marriott Marquis - DUBAI</p>
+                    </div>
+
+                    <div class="divs col-lg-3 col-md-5 col-11 mb-4">
+                        <img src="imgs/our-hotels-img2.jpg" alt="">
+                        <p>Fairmont Nile City - Egypt</p>
+                    </div>
+
+                    <div class="divs col-lg-3 col-md-5 col-11 mb-4">
+                        <img src="imgs/our-hotels-img3.jpg" alt="">
+                        <p>Rosewood Hotel - Jeddah</p>
+                    </div>
+
+                    <div class="icon-right col-1">
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+
+                </div>
+
+
+                <button class="our-hotels-btn hero-btn btn text-white" type="submit">
+                    see more
+                    <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Section Dist -->
+    <section class="section dist"> <!-- dist = distribution -->
+        <div class="container">
+
+            <div class="dist-head">
+                <div class="logo">
+                    <a href="index.html"><img src="imgs/Logo.png" alt="Franchise Logo" draggable="false" /></a>
+                </div>
+                <h3 class="hotel-name mt-2">Hotel Franchise</h3>
+            </div>
+
+            <div class="row dist-body align-items-center justify-content-between py-3">
+                <div class="dist-img col-lg-6 col-12">
+                    <img src="imgs/dist-img.jpg" alt="" />
+                </div>
+                <div class="dist-title col-lg-5 col-12 mt-5">
+                    <p>More Than</p>
+                    <p><span class="_20">"20"</span> Hotel</p>
+                    <p>All over the world!</p>
+
+                    <p class="dist-body-desc">
+                        It help you to find your comfort place with comfort price
+                    </p>
+                </div>
+                <button class="hero-btn btn text-white" type="submit">
+                    Choose your location
+                    <i class="fa-solid fa-arrow-right ms-1"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Our Offers -->
+    <section class="offers">
+        <div class="container">
+            <div class="offers-wrapper">
+
+                <div class="offers-bubble1"></div>
+                <div class="offers-bubble2">
+                </div>
+                <div class="logo offers-logo">
+                    <a href="index.html"><img src="imgs/Logo.png" alt="Franchise Logo"></a>
+                </div>
+
+                <div class="offers-header">
+                    <h2 class="offers-main-title">our offers</h2>
+                    <h2 class="offers-sec-title">An experience of wellness</h2>
+                </div>
+                <div class="offers-body">
+                    <div class="row justify-content-around gap-5">
+
+                        <div class="offers-body-left col-lg-4 col-8">
+                            <p class="free-dinners ms-5">Free Dinners</p>
+                            <div class="offers-img1">
+                                <img src="imgs/offers-img1.jpg" alt="Free Dinner plates photo">
+                            </div>
+                        </div>
+                        <div class="offers-body-right col-lg-4 col-8">
+                            <div class="offers-img2">
+                                <img src="imgs/offers-img2.jpg" alt="Free Dinner plates photo">
+                            </div>
+                            <p class="promo-codes ms-5">Promo Codes</p>
+                        </div>
+
+                    </div>
+
+                    <button class="offers-btn btn text-white">
+                        read more <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section Feedback -->
+    <section class="feedback">
+        <div class="container">
+            <!-- <div class="logo">
+                <a href="index.html"><img src="imgs/Logo.png" alt="Franchise Logo" /></a>
+            </div> -->
+            <div class="feedback-header">
+                <h2 class="title text-uppercase text-white">testimonials</h2>
+                <h2 class="titleTwo fw-bold">Feedback from our customers</h2>
+            </div>
+
+            <div class="feedback-body">
+                <div class="row">
+
+
+                    <div class="left col-lg-6 col-12 mb-5">
+                        <div class="left-header">
+                            <div class="row align-items-center">
+                                <div class="cust-img1 col-xxl-3  col-xl-4">
+                                    <img src="imgs/cust1.jpg" alt="cutomer Mohamed">
+                                </div>
+                                <div class="cust-desc1 col-xl-9 col-lg-8">
+                                    <h3 class="cust-name1 mb-2">Mohamed Ali</h3>
+                                    <span class="cust1">Customer</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="left-body">
+
+                            <div class="rate">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px;"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px;"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px;"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px;"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px;"></i>
+                                </div>
+
+                                <p class="cust1-fd">
+                                    perfect site!<br>
+                                    It is amazing and gave me the perfect price<br>
+                                    keep it up!
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="right col-lg-6 col-12 mb-5">
+                        <div class="right-header">
+                            <div class="row align-items-center">
+                                <div class="cust-img2 col-xxl-3  col-xl-4">
+                                    <img src="imgs/cust2.jpg" alt="cutomer Mohamed">
+                                </div>
+                                <div class="cust-desc2 col-xl-9 col-lg-8">
+                                    <h3 class="cust-name2 mb-2">Aya Ahmed</h3>
+                                    <span class="cust2">Customer</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="right-body">
+
+                            <div class="rate">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px"></i>
+                                    <i class="fa-solid fa-star" style="color: gold; font-size: 23px"></i>
+                                </div>
+
+                                <p class="cust2-fd">
+                                    I'm surprised with this amazing idea<br>Keep going!
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <button class="fb-btn btn text-white fw-bold">
+                    read more <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

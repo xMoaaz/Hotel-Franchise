@@ -1,0 +1,99 @@
+.signup {
+    width: 100%;
+    height: 100vh;
+    background-color: #bf9b7a;
+    overflow: hidden;
+}
+
+.signup-confirm,
+.signup-confirm a {
+    color: #000;
+}
+
+.signup-confirm a {
+    text-decoration: underline;
+}
+
+/* wrapper */
+.signup .wrapper {
+    padding: 30px 0;
+}
+
+.form {
+    margin-top: 30px;
+}
+
+.signup-body input {
+    padding: 11px 20px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.pass-wrapper {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translate(0%, -70%);
+    font-size: 12px;
+    color: rgb(146, 146, 146);
+    
+}
+
+.icon svg {
+    cursor: pointer;
+}
+
+.signup-body button {
+    background-color: #09132b;
+    border: 0;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+.signup-body button:hover {
+    background-color: #11285ecf;
+}
+
+/* line-or */
+.line-or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+    color: #fff;
+}
+
+.line {
+    background: #fff;
+    height: 2px;
+    width: 45%;
+}
+
+.btn-signup {
+    color: #fff;
+}
+
+.btn-microsoft {
+    background-color: #fff !important;
+    color: #000;
+}
+
+.btn-microsoft img {
+    width: 24px;
+    margin-right: 25px;
+}
+
+.terms-conds {
+    font-size: 13px;
+    color: rgb(91, 91, 91);
+    margin-top: 10px;
+}
+
+.terms-conds a {
+    text-decoration: underline;
+    color: inherit;
+}

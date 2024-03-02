@@ -1,0 +1,27 @@
+/* Basic */
+
+.login {
+    overflow: hidden;
+    height: 100vh;
+    color: #bf9b7a;
+}
+
+.login .wrapper {
+    padding: 30px 0;
+    background-color: #080a20;
+}
+
+.img {
+    background-color: #bf9b7a;
+}
+
+/* ****************************** */
+
+.login-confirm,
+.login-confirm a {
+    color: #bf9b7a;
+}
+
+.btn-login {
+    background-color: #bf9b7ad7 !important;
+}

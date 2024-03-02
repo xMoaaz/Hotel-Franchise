@@ -1,0 +1,840 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inika", serif;
+}
+
+:root {
+    --primary-color: #bf9b7a;
+    --sec-color: #957b62;
+    --darkblue-color: #06081A;
+    
+}
+
+
+/*** General Styles ***/
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar Start */
+nav.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-wrapper {
+    width: 100%;
+    height: 78.44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+/*** links bootstrap override start ***/
+.navbar-expand-lg .offcanvas {
+    flex-grow: 0;
+}
+
+.nav-link {
+    padding: 0;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-nav .nav-link.active:hover,
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+}
+
+/*** offCanvas ***/
+
+[aria-modal = true] {
+    background-color: #121110;
+}
+/*** links bootstrap override end ***/
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 54px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    height: 60%;
+
+    margin-bottom: 0;
+    background: rgba(110, 110, 110, 0.3);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+    gap: 22px;
+}
+
+.links li {
+    margin: 0 8px;
+}
+
+.links li a {
+    position: relative;
+    margin: 0 6px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.links li a::after {
+    content: "";
+    position: absolute;
+
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.links li a.active::after,
+.links li a:hover::after {
+    width: 100%;
+}
+
+.nav-right-icons a {
+    color: var(--primary-color);
+    font-size: 26px;
+    transition: 0.2s;
+}
+
+.nav-right-icons a:hover {
+    color: rgb(191, 155, 122, 0.67);
+}
+
+.nav-right-icons a .user {
+    margin-left: 14px;
+}
+
+/* burger icon and its container */
+.navbar-toggler {
+    border: 1px solid var(--primary-color);
+    padding: 7px 13px;
+}
+
+.fa-bars {
+    color: var(--primary-color);
+}
+
+/*** Navbar End ***/
+
+
+/*** Header Start ***/
+header.hero {
+    position: relative;
+    
+    background: url(../imgs/home.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(22, 21, 32, 0.4);
+}
+
+.hero-wrapper {
+    height: 100vh;
+    
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-left: 20px;
+
+    position: relative;
+}
+
+.hotel-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 70px;
+}
+
+.hero-title {
+    font-family: "Inter", sans-serif;
+    font-size: 76px;
+    /* letter-spacing: 1px; */
+    font-weight: 600;
+    margin: 22px 0 0 70px;
+    transition: 0.3s;
+}
+
+/*** Media Queries for header part for (992px and 768px) screens START ***/
+
+@media (width < 992px) {
+    .hero-title {
+        font-family: "Inter", sans-serif;
+        font-size: 60px;
+        /* letter-spacing: 1px; */
+        font-weight: 600;
+        margin: 22px 0 0 20px;
+        transition: 0.3s;
+    }
+}
+
+@media (width < 768px) {
+    .hero-title {
+        font-family: "Inter", sans-serif;
+        font-size: 40px;
+        /* letter-spacing: 1px; */
+        font-weight: 600;
+        margin: 22px 0 0 20px;
+        transition: 0.3s;
+    }
+
+    button.hero-btn {
+        letter-spacing: 1.4px;
+        font-weight: 600;
+        background-color: rgb(191, 155, 122, 0.67);
+        text-transform: capitalize;
+        font-size: 18px;
+        transform: 0.3s;
+        border: none;
+        margin: 30px 0 0 0;
+    }
+
+    div.bullets {
+        /* height: 150px; */
+        margin: 0 auto;
+        position: absolute;
+        top: 95%;
+        left: 42%;
+    }
+}
+
+/*** Media Queries for header part for (992px and 768px) screens END ***/
+
+.hero-title:hover {
+    transform: translateY(-6px);
+}
+
+.hero-btn {
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    background-color: rgb(191, 155, 122, 0.67);
+    text-transform: capitalize;
+    margin: 0 auto ;
+    font-size: 18px;
+    transform: 0.3s;
+    margin-top: 30px;
+    border: none;
+}
+
+.hero-btn:hover {
+    background-color: rgba(191, 155, 122, 0.4);
+}
+
+.hero-btn:active {
+    transform: translateY(1px);
+    background-color: rgba(191, 155, 122, 0.4) !important;
+}
+
+.bullets {
+    /* height: 150px; */
+    margin: 0 auto;
+    position: absolute;
+    top: 95%;
+    left: 46%;
+}
+
+.bullets a {
+    margin-left: 11px;
+}
+
+.bullets a span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(191, 155, 122, 0.4);
+}
+
+.bullets span:hover {
+    background-color: var(--primary-color);
+}
+
+.bullets .active {
+    background-color: var(--primary-color);
+}
+
+
+/*** Header End ***/
+
+
+
+
+
+/*** About Start ***/
+.about {
+    padding: 50px 0;
+    background-color: #06081A;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+
+/* about-header */
+h2.about-title {
+    font-size: 45px;
+    width: fit-content;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    margin: 10px auto 70px auto;
+    font-family: "Inter", sans-serif;
+    position: relative;
+}
+
+h2.about-title::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: -4px;
+    left: 0;
+
+    transition: all 0.3s;
+}
+
+h2.about-title:hover::after {
+    width: 100%;
+}
+
+/* about-body */
+.about-body {
+    padding: 20px 0;
+    
+}
+.about-left {
+    border: 1px solid #bf9b7ad4;
+    padding: 40px;
+    border-radius: 20px 80px 40px 30px;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.about-left:hover {
+    box-shadow: 7px 10px 40px -20px gray;
+    transform: translateY(-5px);
+}
+
+
+.about-left-title {
+    font-size: 36px;
+    font-family: "Inter", sans-serif;
+    /* margin-bottom: 40px; */
+}
+.about-left-desc {
+    letter-spacing: 0.8px;
+    color: #bf9b7ad4;
+}
+
+.about-btn {
+    display: block;
+    margin: 6.6rem auto 0 auto;
+}
+
+.about-img {
+    width: 100%;
+}
+
+/* about-bubble */
+.about-bubble {
+    position: absolute;
+    left: -50px;
+    bottom: -50px;
+    width: 155px;
+    height: 155px;
+    background-color: #957a64;
+    border-radius: 50%;
+}
+
+/*** About End ***/
+
+
+/*** Our Hotels Starts ***/
+.our-hotels {
+    padding: 55px 0;
+    position: relative;
+    background-color: #957a64;
+    overflow: hidden;
+}
+
+/* Hotels Bubbles */
+.hotels-bubble1 {
+    width: 155px;
+    height: 155px;
+    background-color: var(--darkblue-color);
+    border-radius: 50%;
+
+    /* position stuff */
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(35%,-35%);
+}
+
+.hotels-bubble2 {
+    width: 155px;
+    height: 155px;
+    background-color: var(--darkblue-color);
+    border-radius: 50%;
+
+    /* position stuff */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-35%,35%);
+}
+
+/* Hotels Header */
+.our-hotels-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2.hotels-main-title {
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--darkblue-color);
+    color: #06081a;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+h2.hotels-sec-title {
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.our-hotels-btn {
+    margin-top: 60px;
+    background-color: #957a64;
+
+    letter-spacing: 2px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 2px rgba(0, 0, 0, 0.3), -20px -12px 0 var(--darkblue-color);
+}
+
+.our-hotels-btn:hover {
+    background-color: #705c4c;
+}
+
+/* our-hotel-body */
+.our-hotels-body .divs {
+    background-color: var(--darkblue-color);
+    text-align: center;
+    padding: 0;
+    border-radius: 30px;
+    color: #fff;
+    border: 1px solid #000;
+
+    transition: 0.3s;
+}
+
+.our-hotels-body .divs:hover {
+    transform: translateY(-7px);
+}
+
+.our-hotels-body .divs img{
+    width: 100%;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+.our-hotels-body .divs p {
+    padding: 15px 20px 0;
+}
+
+.icon-left, .icon-right {
+    text-align: center;
+    font-size: 30px;
+}
+
+.icon-left, .icon-right {
+    cursor: pointer;
+}
+
+/* media queries */
+@media (width < 992px) {
+    .icon-left,
+    .icon-right {
+        display: none;
+    }
+}
+
+/*** Our Hotels End ***/
+
+
+
+/*** dist Start ***/
+section.dist {
+    padding: 40px;
+    background-color: #06081A;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+}
+
+
+/* dist head */
+.dist-head {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.dist-head .logo{
+    margin: 0 auto
+}
+
+.dist-head .hotel-name {
+    color: var(--primary-color);
+}
+
+/* dist body */
+
+.dist-img img {
+    width: 100%;
+}
+
+.dist-title {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.dist-title:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 65px 80px -100px gray;
+}
+
+._20 {
+    color: var(--primary-color);
+}
+
+.dist-title p {
+    color: #fff;
+    font-size: 61px;
+    line-height: 4rem;
+    font-weight: 600;
+}
+
+p.dist-body-desc {
+    font-size: 18px;
+    color: var(--primary-color);
+    line-height: 1.7rem;
+    margin-top: 50px;
+}
+
+.dist-body .btn {
+    width: fit-content;
+    padding: 10px 25px;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+/*** dist End ***/
+
+
+
+/*** Offers Start ***/
+
+.offers {
+    padding: 40px 0;
+    position: relative;
+    background-color: var(--sec-color)
+}
+
+/* offers-bubbles */
+.offers-bubble1 {
+    width: 210px;
+    height: 210px;
+    background-color: rgba(255, 255, 255, 69%);;
+    border-radius: 50%;
+
+    /* position stuff */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-35%,-35%);
+}
+
+.offers-bubble2 {
+    width: 195px;
+    height: 195px;
+    background-color: #06081A;
+    border-radius: 50%;
+
+    /* position stuff */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-47.4%,-33%);
+}
+
+.offers-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* offers-header */
+.offers-header {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.offers-main-title {
+    color: #06081a;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.offers-sec-title {
+    color: #fff;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    font-size: 35px;
+}
+
+/* offers body */
+/* Translate stuff Start*/
+.offers-img1,
+.offers-img2,
+.free-dinners,
+.promo-codes {
+    transition: 0.3s all;
+}
+
+.offers-body-left:hover .free-dinners{
+    transform: translateX(50px);
+}
+
+.offers-body-left:hover .offers-img1{
+    transform: translateX(-10px);
+}
+
+.offers-body-right:hover .promo-codes{
+    transform: translateX(50px);
+}
+
+.offers-body-right:hover .offers-img2{
+    transform: translateX(-10px);
+}
+/* Translate stuff End*/
+
+
+.offers-img1 {
+    box-shadow: -25px -20px 0 rgba(6, 8, 26, 0.32);
+}
+
+.offers-img2 {
+    box-shadow: -20px 25px 0 rgba(6, 8, 26, 0.32);
+}
+
+
+.offers-img1 img,
+.offers-img2 img {
+    width: 100%;
+    /* height: 100%; */
+    background-size: cover;
+}
+
+.free-dinners {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 31px;
+}
+
+.promo-codes {
+    color: #06081A;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 31px;
+}
+
+.offers-btn {
+    display: block;
+    width: fit-content;
+    padding: 15px 30px 5px 20px;
+
+    background-color: #06081A;
+    
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: silver !important;
+    font-size: 20px;
+    
+    margin: 70px 90px 0 auto;
+    /* margin-left: auto;
+    margin-top: 70px; */
+    border-radius: 17px;
+
+    box-shadow: -20px -12px 0 rgba(255, 255, 255, 69%), 3px 3px 8px rgba(0, 0, 0, 50%);
+    transition: 0.3s all;
+
+}
+
+.offers-btn:hover {
+    background-color: #1c244d;
+    box-shadow: -20px -12px 0 rgba(255, 255, 255, 60%), 3px 3px 8px rgba(0, 0, 0, 80%);
+}
+
+/* media queries */
+@media (width < 992px) {
+    .offers-btn {
+        margin: 70px auto 0 auto;
+    }
+}
+
+/*** Offers End ***/
+
+
+
+/*** Feedback Start ***/
+.feedback {
+    padding: 40px;
+    background-color: rgba(124, 99, 76, 0.96);
+}
+
+/* feedback header */
+.feedback-header {
+    margin: 80px 0;
+}
+
+.feedback .title {
+    font-size: 40px;
+}
+
+.feedback .titleTwo {
+    font-size: 45px;
+    font-family: "Inter", sans-serif;
+}
+
+/* feedback-body */
+/* top part */
+.cust-img1 {
+    /* background-color: rgba(245, 223, 239, 0.623); */
+}
+
+.cust-img1 img, .cust-img2 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.feedback-body h3 {
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+}
+
+.feedback-body span {
+    color: #fff;
+    /* font-weight: bold; */
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.9px
+}
+
+/* bottom part */
+.rate {
+    margin: 50px 0 0 70px;
+    width: 85%;
+    transition: 0.3s;
+}
+
+
+.cust1-fd,
+.cust2-fd {
+    width: 80%;
+    /* flex stuff to center */
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+
+
+    color: #fff;
+    padding: 20px;
+    background-color: rgba(6, 8, 26, 0.87);
+    border-radius: 15px;
+
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    transition: 0.3s;
+
+}
+
+.cust1-fd:hover,
+.cust2-fd:hover {
+    box-shadow: 3px 6px 15px rgba(255, 255, 255, 69%);
+    transform: translateX(5px);
+}
+
+.fb-btn {
+    padding: 15px 30px 5px 20px;
+    background-color: #06081A;
+    
+    letter-spacing: 1.6px;
+    text-transform: capitalize;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto ;
+    
+    border-radius: 17px;
+    transition: 0.3s all;
+}
+
+.fb-btn:hover {
+    background-color: #1c244d;
+}
+
+
+/*** Feedback End ***/
